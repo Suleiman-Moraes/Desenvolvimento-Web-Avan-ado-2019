@@ -19,7 +19,7 @@
                 background-color:#FFF;
             }
             
-            #janela:before {
+            #janela:before, #janela:after {
                 position: absolute;
                 left:5px;
                 top:50%;
@@ -30,6 +30,12 @@
                 transform: rotate(-3deg);
                 content: "";
                 z-index: -1;
+            }
+            
+            #janela:after {
+                right: 10px;
+                left: auto;
+                transform: rotate(3deg);
             }
                         
         </style>
