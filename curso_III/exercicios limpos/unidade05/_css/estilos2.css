@@ -21,3 +21,11 @@ div#janela {
 input {
 	display:inline-block;
 }
+
+.vermelho{
+	background-color: red;
+}
+
+.azul {
+	background-color: blue;
+}
