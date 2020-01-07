@@ -12,7 +12,11 @@ window.onload = function() {
 		ajax.open("GET","pagina_dados.txt",true);
 		ajax.send(null);
 		ajax.onreadystatechange = function() { 
-
+			if(ajax.readyState == 4){
+				if(ajax.status == 200){
+					janela.innerHTML = ajax.responseText;
+				}
+			}
 		}
 	}
 }
