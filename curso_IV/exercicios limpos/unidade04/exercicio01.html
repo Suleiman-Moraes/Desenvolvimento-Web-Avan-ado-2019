@@ -36,7 +36,19 @@
         
         <script src="jquery.js"></script>
         <script>
+			$(function(){
+				$("input[type='text'] + span").css({
+					display: 'none'
+				});
 
+				$("input[type='text']").focus(function(){
+					$(this).next().fadeIn(1000);
+				});
+
+				$("input[type='text']").blur(function(){
+					$(this).next().fadeOut(1000)
+				});
+			});
 		</script>
 
     </head>

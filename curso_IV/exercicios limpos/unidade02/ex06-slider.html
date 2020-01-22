@@ -19,19 +19,27 @@
             $(function() {
                 $('#slider').slider({
                     step: 5,
-                    value: 120,
+                    values: [100, 700],
                     min: 100,
                     max: 1000,
+                    range: true,
                     slide: function(event, ui){
-                        $('#valor').val(`R$ ${ui.value}`);
+                        $('#min').val(`R$ ${ui.values[0]}`);
+                        $('#max').val(`R$ ${ui.values[1]}`);
                     }
                 });
-                $('#valor').val(`R$ ${$('#slider').slider('value')}`);
+                $('#min').val(`R$ ${$('#slider').slider('values, 0')}`);
+                $('#max').val(`R$ ${$('#slider').slider('values, 1')}`);
             });
         </script>        
     </head>
     <body>
         <div id="slider"></div>
-        <input type="text" id="valor">
+
+        <label for="min">Valor Mínimo</label>
+        <input type="text" id="min">
+
+        <label for="max">Valor Máximo</label>
+        <input type="text" id="max">
     </body>
 </html>

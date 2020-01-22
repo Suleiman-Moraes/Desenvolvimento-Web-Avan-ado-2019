@@ -45,7 +45,14 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
 			$( function() {
-
+				$('.principal').click(function(){
+					if($(this).is(':checked')){
+						$('.opcoes').prop('checked', true);
+					}
+					else{
+						$('.opcoes').prop('checked', false);
+					}
+				});
 			});
 		</script>
     </head>
