@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery UI Menu</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function() {
+                $('#menu').menu();
+            })
+        </script>
+        <style>
+            .ui-menu {
+                width:200px
+            }
+        </style>
+
+    </head>
+    <body>
+        <ul id="menu">
+            <li><div>Principal</div></li>
+            <li><div>Pizzas</div>
+                <ul>
+                    <li><div>Calabresa</div></li>
+                    <li><div>Quatro Queijos</div></li>
+                    <li><div>Margherita</div></li>
+                </ul>
+            </li>
+            <li><div>Franquias</div>
+                <ul>
+                    <li><div>São Paulo</div>
+                        <ul>
+                            <li><div>Itaim</div></li>
+                            <li><div>Moema</div></li>
+                            <li><div>Vila Mariana</div></li>
+                        </ul>                   
+                    
+                    </li>
+                    <li><div>Rio de Janeiro</div></li>
+                    <li><div>Recife</div></li>
+                </ul>            
+            
+            
+            </li>
+            <li><div>Sobre nós</div></li>
+            <li><div>Contato</div></li>
+        </ul>
+    </body>
+</html>
