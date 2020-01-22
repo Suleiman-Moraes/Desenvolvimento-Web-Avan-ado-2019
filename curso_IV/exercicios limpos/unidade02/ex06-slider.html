@@ -16,7 +16,18 @@
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>
-
+            $(function() {
+                $('#slider').slider({
+                    step: 5,
+                    value: 120,
+                    min: 100,
+                    max: 1000,
+                    slide: function(event, ui){
+                        $('#valor').val(`R$ ${ui.value}`);
+                    }
+                });
+                $('#valor').val(`R$ ${$('#slider').slider('value')}`);
+            });
         </script>        
     </head>
     <body>

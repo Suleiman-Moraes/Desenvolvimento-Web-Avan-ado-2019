@@ -1,18 +1,75 @@
 <!doctype html>
 <html lang="pt">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>jQuery UI Menu</title>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script>
 
-        </script> 
-    </head>
-    <body>
-        <div id="tabs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Menu</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function(){
+            var meuTab = $('#tabs').tabs({
+                active: 1,
+                collapsible: true,
+                // event: 'mouseover'
+            });
+
+            meuTab.find('.ui-tabs-nav').sortable({
+                axis: 'x',
+                stop: function(){
+                    meuTab.tabs('refresh');
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="tabs">
+        <ul>
+            <li><a href="#tab1">Calabreza</a></li>
+            <li><a href="#tab2">Estraga nóx</a></li>
+            <li><a href="#tab3">Portuguesa</a></li>
+        </ul>
+        <div id="tab1">
+            <h3>Calabreza</h3>
+            <p>
+                Lorem ipsum porttitor maecenas eros tempor conubia, purus auctor iaculis quam nec. hendrerit nam mi vel
+                praesent amet facilisis turpis dui sagittis, aliquet duis vitae elementum eros magna gravida semper,
+                tincidunt phasellus lobortis a et quisque condimentum eros. duis placerat odio mauris morbi dapibus
+                varius metus sem, a ultricies massa ipsum suscipit lectus himenaeos in suspendisse, cubilia in netus
+                vestibulum dictum lectus mi. aenean aliquet etiam blandit at quam imperdiet donec et, conubia sociosqu
+                hac turpis pulvinar placerat tellus, in ante aenean nostra consectetur curabitur aptent inceptos,
+                facilisis interdum magna urna fusce cras.
+            </p>
         </div>
-    </body>
+        <div id="tab2">
+            <h3>Estraga nóx</h3>
+            <p>
+                Lorem ipsum porttitor maecenas eros tempor conubia, purus auctor iaculis quam nec. hendrerit nam mi vel
+                praesent amet facilisis turpis dui sagittis, aliquet duis vitae elementum eros magna gravida semper,
+                tincidunt phasellus lobortis a et quisque condimentum eros. duis placerat odio mauris morbi dapibus
+                varius metus sem, a ultricies massa ipsum suscipit lectus himenaeos in suspendisse, cubilia in netus
+                vestibulum dictum lectus mi. aenean aliquet etiam blandit at quam imperdiet donec et, conubia sociosqu
+                hac turpis pulvinar placerat tellus, in ante aenean nostra consectetur curabitur aptent inceptos,
+                facilisis interdum magna urna fusce cras.
+            </p>
+        </div>
+        <div id="tab3">
+            <h3>Portuguesa</h3>
+            <p>
+                Lorem ipsum porttitor maecenas eros tempor conubia, purus auctor iaculis quam nec. hendrerit nam mi vel
+                praesent amet facilisis turpis dui sagittis, aliquet duis vitae elementum eros magna gravida semper,
+                tincidunt phasellus lobortis a et quisque condimentum eros. duis placerat odio mauris morbi dapibus
+                varius metus sem, a ultricies massa ipsum suscipit lectus himenaeos in suspendisse, cubilia in netus
+                vestibulum dictum lectus mi. aenean aliquet etiam blandit at quam imperdiet donec et, conubia sociosqu
+                hac turpis pulvinar placerat tellus, in ante aenean nostra consectetur curabitur aptent inceptos,
+                facilisis interdum magna urna fusce cras.
+            </p>
+        </div>
+    </div>
+</body>
+
 </html>
