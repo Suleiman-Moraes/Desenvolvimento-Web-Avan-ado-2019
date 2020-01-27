@@ -1,0 +1,14 @@
+Exercicio 02
+dados = new Array(
+	[[14,44,26],'2016'],
+	[[18,38,38],'2017'],
+	[[24,32,57],'2018']
+);
+
+$('#janela_grafico').jqBarGraph({
+	data: dados,
+	colors: ['#002A4A','#FF9311','#D64700'] 
+});	
+
+
+

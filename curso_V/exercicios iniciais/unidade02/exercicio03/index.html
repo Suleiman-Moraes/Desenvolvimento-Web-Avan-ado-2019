@@ -1,0 +1,47 @@
+<!---
+*** CRÉDITOS ***
+https://github.com/remybach/jQuery.superLabels
+--->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+    	<meta charset="utf-8">
+        <title>Curso jQuery Avançado - Libraries</title>
+        <link href="_css/estilo.css"    rel="stylesheet" />
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="_js/jquery.superLabels.js"></script>        
+        <script>
+            $(function() {
+                $('form').superLabels({
+                    labelLeft:5,labelTop:7,fadeDuration:500
+                })
+            });
+        </script>	
+    </head>
+    
+    <body>
+    
+        <form class="formulario" action="" method="POST">
+        	<ul>
+            	<li>
+                	<label for="nome">Nome</label>
+                    <input type="text" name="nome" value="">
+                </li>
+                
+            	<li>
+                	<label for="telefone">Telefone</label>
+                    <input type="tel" name="telefone" value="">
+                </li>
+                
+            	<li>
+                	<label for="email">email</label>
+                    <input type="email" name="email" value="">
+                </li>                                
+            </ul>
+
+        </form>
+    
+    </body>
+</html>

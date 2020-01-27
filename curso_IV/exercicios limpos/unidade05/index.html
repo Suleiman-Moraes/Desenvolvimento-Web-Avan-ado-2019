@@ -59,6 +59,17 @@
             $('#fotoprincipal').prepend('<img />');
 
             $('#fotoprincipal img').attr('src', $('#galeria a').attr('href'));
+
+            $('#legenda').text($('#galeria a img').attr('title'));
+
+            function abrirFoto(e){
+                e.preventDefault();
+                $('#fotoprincipal img').attr('src', $(this).parent().attr('href'));
+
+                $('#legenda').text($(this).attr('title'));
+            }
+
+            $('.thumb').on('click', abrirFoto);
         })	
     </script>
 </head>

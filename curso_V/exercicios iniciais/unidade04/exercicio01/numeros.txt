@@ -1,0 +1,7 @@
+Exemplo 01
+dados = new Array(
+	[10,'Jan','#002A4A'], [15,'Fev','#17607D'], [13,'Mar','#FFF1CE'], [16,'Abr','#FF9311'], [14,'Mai','#D64700']
+);	
+
+
+

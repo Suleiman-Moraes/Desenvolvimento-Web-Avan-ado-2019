@@ -1,0 +1,33 @@
+select,textarea,input[type="text"],input[type="password"],input[type="datetime"],
+input[type="datetime-local"],input[type="date"],input[type="month"],input[type="time"],
+input[type="week"],input[type="number"],input[type="email"],input[type="url"],
+input[type="search"],input[type="tel"],input[type="color"],.uneditable-input
+{
+	display:inline-block;
+	height:18px;
+	padding:4px;
+	margin-bottom:9px;
+	font-size:13px;
+	line-height:18px;
+	color:#666;
+}
+
+textarea{height:auto;}		
+
+.formulario {
+	width:400px;
+	margin:0 auto;
+	font-family:Helvetica,Arial,sans-serif;font-size:13px;
+}
+
+.formulario ul 		{ margin:0; padding:0 }
+.formulario li 		{ list-style:none; position:relative }
+.formulario label 	{ display:inline }
+
+input, textarea {
+	border:1px solid #ccc;
+	border-radius:3px;
+	padding:8px 5px;
+	font-size:75%;
+	width:100%;
+}
