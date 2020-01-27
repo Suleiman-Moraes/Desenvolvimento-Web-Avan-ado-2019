@@ -25,8 +25,20 @@ http://www.workshop.rs/jqbargraph/
     <script src="_js/jqBarGraph.1.1.min.js"></script>
     <script>
         $(function () {
-
-        })
+            var dadosGrafico = new Array(
+                [10, 'Jan', '#002A4A'], [15, 'Fev', '#17607D'], [13, 'Mar', '#FFF1CE'], [16, 'Abr', '#FF9311'], [14, 'Mai', '#D64700']
+            );
+            $('#janela_grafico').jqBarGraph({ 
+                data: dadosGrafico,
+                width: 600,
+                height: 400,
+                barSpace: 20,
+                speed: 10,
+                prefix: 'R$ ',
+                postfix: ',00',
+                position: 'bottom'
+                });
+        });
     </script>
 </head>
 
