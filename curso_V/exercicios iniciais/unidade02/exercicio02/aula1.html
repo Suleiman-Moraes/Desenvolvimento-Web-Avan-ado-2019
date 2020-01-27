@@ -2,91 +2,94 @@
 *** CRÉDITOS ***
 https://harvesthq.github.io/chosen/
 --->
-<!doctype html> 
-<html lang="pt-br"> 
-    <head>
-        <meta charset="utf-8">
-        <title>Curso jQuery Avançado - Libraries</title>
-        
-        <link href="_css/chosen.css" rel="stylesheet">
-        <style>
-			body {
-				font-family:Arial, Helvetica, sans-serif;
-				font-size:12px;
-			}
-			
-			label {
-				display:block;
-				color:#666;
-				margin-bottom:5px
-			}
-			
-			#principal {
-				width:500px;
-				height:300px;
-				background-color:#F2F2F2;
-				border:1px solid #CCC;
-				margin:10px auto;
-				padding:20px	
-			}
-		</style>
-    </head>
+<!doctype html>
+<html lang="pt-br">
 
-    <body>
-   		<div id="principal">
-      		<form>
-			<label for="estadoID">Estado</label>
-                <select data-placeholder="Selecione até 5 estados" name="estadoID" id="estadoID" class="selectespecial" style="width:350px">
-                    <option value="" ></option>
-                    <optgroup label="NORTE">
-                    	<option value="1" >Acre</option>
-                        <option value="3" >Amapá</option>
-                        <option value="4" >Amazonas</option>
-                        <option value="14" >Pará</option>
-                        <option value="22" >Rondônia</option>
-                        <option value="23" >Roraima</option>                        
-                    </optgroup>
-                    
-                    <optgroup label="NORDESTE">
-                    	<option value="2" >Alagoas</option>
-                    	<option value="5" >Bahia</option>
-                    	<option value="6" >Ceará</option>
-                        <option value="10" >Maranhão</option>
-                        <option value="15" >Paraíba</option>
-                        <option value="17" >Pernambuco</option>
-                        <option value="18" >Piauí</option>
-                        <option value="19" >Rio Grande do Norte</option>
-                        <option value="26" >Sergipe</option>                        
-                    </optgroup> 
-                    
-                    <optgroup label="CENTRO-OESTE">
-                    	<option value="7" >Distrito Federal</option>
-                        <option value="9" >Goiás</option>
-                    	<option value="11" >Mato Grosso</option>
-                    	<option value="12" >Mato Grosso do Sul</option>  
-                        <option value="27" >Tocantins</option>                      
-                    </optgroup>
- 
- 					<optgroup label="SUDESTE">
-                    	<option value="8" >Espírito Santo</option>                    
-                    	<option value="13" >Minas Gerais</option>
-                        <option value="21" >Rio de Janeiro</option>
-                        <option value="24" >São Paulo</option>
-                    </optgroup>
-                    
-                    <optgroup label="SUL">
-                    	<option value="16" >Paraná</option>
-                    	<option value="20" >Rio Grande do Sul</option>
-						<option value="25" >Santa Catarina</option>
-                    </optgroup>
-                </select>				
-       		</form>
-		</div>
-        
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="_js/chosen.jquery.js"></script>
-        <script> 
-  
-        </script>        
-    </body>
+<head>
+    <meta charset="utf-8">
+    <title>Curso jQuery Avançado - Libraries</title>
+
+    <link href="_css/chosen.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+        }
+
+        label {
+            display: block;
+            color: #666;
+            margin-bottom: 5px
+        }
+
+        #principal {
+            width: 500px;
+            height: 300px;
+            background-color: #F2F2F2;
+            border: 1px solid #CCC;
+            margin: 10px auto;
+            padding: 20px
+        }
+    </style>
+</head>
+
+<body>
+    <div id="principal">
+        <form>
+            <label for="estadoID">Estado</label>
+            <select data-placeholder="Selecione até 5 estados" name="estadoID" id="estadoID" class="selectespecial"
+                style="width:350px">
+                <option value=""></option>
+                <optgroup label="NORTE">
+                    <option value="1">Acre</option>
+                    <option value="3">Amapá</option>
+                    <option value="4">Amazonas</option>
+                    <option value="14">Pará</option>
+                    <option value="22">Rondônia</option>
+                    <option value="23">Roraima</option>
+                </optgroup>
+
+                <optgroup label="NORDESTE">
+                    <option value="2">Alagoas</option>
+                    <option value="5">Bahia</option>
+                    <option value="6">Ceará</option>
+                    <option value="10">Maranhão</option>
+                    <option value="15">Paraíba</option>
+                    <option value="17">Pernambuco</option>
+                    <option value="18">Piauí</option>
+                    <option value="19">Rio Grande do Norte</option>
+                    <option value="26">Sergipe</option>
+                </optgroup>
+
+                <optgroup label="CENTRO-OESTE">
+                    <option value="7">Distrito Federal</option>
+                    <option value="9">Goiás</option>
+                    <option value="11">Mato Grosso</option>
+                    <option value="12">Mato Grosso do Sul</option>
+                    <option value="27">Tocantins</option>
+                </optgroup>
+
+                <optgroup label="SUDESTE">
+                    <option value="8">Espírito Santo</option>
+                    <option value="13">Minas Gerais</option>
+                    <option value="21">Rio de Janeiro</option>
+                    <option value="24">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="SUL">
+                    <option value="16">Paraná</option>
+                    <option value="20">Rio Grande do Sul</option>
+                    <option value="25">Santa Catarina</option>
+                </optgroup>
+            </select>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="_js/chosen.jquery.js"></script>
+    <script>
+        $('.selectespecial').chosen();
+    </script>
+</body>
+
 </html>

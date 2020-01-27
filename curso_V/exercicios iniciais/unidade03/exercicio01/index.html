@@ -17,12 +17,14 @@ https://github.com/JafarAkhondali/lightzoom
         <script src="_js/lightzoom.js"></script>
         <script>
             $(function () {
-
+                $('#imagem').lightzoom({
+                    zoomPower: 4, glassSize: 180
+                });
             });
         </script>
     </head>
 
     <body> 
-        
+        <img src="_imagem/foto.jpg" id="imagem" width="960px" height="720px" alt="Foto de Castelo">
     </body>
 </html>
