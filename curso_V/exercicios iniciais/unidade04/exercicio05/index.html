@@ -4,45 +4,50 @@ https://github.com/rendro/easy-pie-chart
 -->
 <!doctype html>
 <html lang="pt">
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Curso jQuery Avançado - Libraries</title>
-        <meta name="viewport" content="width=device-width"/>
-        <link rel="stylesheet" href="_css/estilo.css"/>
-    </head>
-    <body>
-        <!-- codigo html -->
-        <div class="chart" data-percent="50">
-            <div class="percent"></div>
-        </div>
-        
-        <div>
-            <ul>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-        
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-        <script src="_js/jquery.easypiechart.min.js"></script>
-        <script>
-        $(function() {
-            
+<head>
+    <meta charset="UTF-8" />
+    <title>Curso jQuery Avançado - Libraries</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="_css/estilo.css" />
+</head>
+
+<body>
+    <!-- codigo html -->
+    <div class="chart" data-percent="50">
+        <div class="percent"></div>
+    </div>
+
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="_js/jquery.easypiechart.min.js"></script>
+    <script>
+        $(function () {
+
             $('.chart').easyPieChart({
-                barColor:'#0F0',
-                trackColor:'#ddd',
-                scaleColor:false,
-                lineWidth:10,
+                barColor: '#0F0',
+                trackColor: '#ddd',
+                scaleColor: false,
+                lineWidth: 10,
                 lineCap: 'round', // butt, square, round
-                animate:1500,
-                easing:"easeOutBack"
+                animate: 5000,
+                easing: "easeOutBack",
+                onStart: function () { $('li:nth-child(1)').text('Iniciou a animação') },
+                onStop: function () { $('li:nth-child(2)').text('Terminou a animação') }
             });
             $('.percent').text($('.chart').attr('data-percent'));
-            
-            
+
+
         });
-        </script>
-    </body>
+    </script>
+</body>
+
 </html>
