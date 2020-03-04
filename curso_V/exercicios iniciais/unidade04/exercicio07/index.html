@@ -41,28 +41,33 @@ https://github.com/rendro/easy-pie-chart
     <script src="_js/jquery.easypiechart.min.js"></script>
     <script>
         $(function () {
-            $(window).scroll(function(){
-                $('li:nth-child(1)').text($(this).scrollTop());
-            });
-
-            $('.chart').easyPieChart({
-                barColor: '#0F0',
-                trackColor: '#ddd',
-                scaleColor: false,
-                lineWidth: 10,
-                lineCap: 'round', // butt, square, round
-                animate: 5000,
-                easing: "swing",
-                onStart: function () {
-                    $('li:nth-child(1)').text("Iniciou a animação");
-                },
-                onStop: function () {
-                    $('li:nth-child(2)').text("Terminou a animação");
-                },
-                onStep: function (from, to, percent) {
-                    $(this.el).find('.percent').text(Math.round(percent));
+            $(window).scroll(function () {
+                $('li:nth-child(3)').text($(this).scrollTop());
+                if ($(this).scrollTop() >= 2500) {
+                    iniciarGrafico();
                 }
             });
+
+            function iniciarGrafico() {
+                $('.chart').easyPieChart({
+                    barColor: '#0F0',
+                    trackColor: '#ddd',
+                    scaleColor: false,
+                    lineWidth: 10,
+                    lineCap: 'round', // butt, square, round
+                    animate: 5000,
+                    easing: "swing",
+                    onStart: function () {
+                        $('li:nth-child(1)').text("Iniciou a animação");
+                    },
+                    onStop: function () {
+                        $('li:nth-child(2)').text("Terminou a animação");
+                    },
+                    onStep: function (from, to, percent) {
+                        $(this.el).find('.percent').text(Math.round(percent));
+                    }
+                });
+            }
             //$('.percent').text($('.chart').attr('data-percent'));
         });
     </script>
