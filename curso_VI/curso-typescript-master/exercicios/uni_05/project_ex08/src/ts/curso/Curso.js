@@ -4,5 +4,7 @@ class Curso {
         this.cargaHoraria = cargaHoraria;
         this.categoria = categoria;
     }
+    render() {
+    }
 }
 export default Curso;
